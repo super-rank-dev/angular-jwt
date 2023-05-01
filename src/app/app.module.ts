@@ -14,6 +14,7 @@ import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { AuthStoreService } from './auth-store.service';
 import { StoreModule } from '@ngrx/store';
 import { CourseReducer } from 'src/ngrx/reducers/course.reducer';
+import { AtmarkPipe } from 'src/pipes/atmark.pipe';
 
 const routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +28,8 @@ const routes = [
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AtmarkPipe
   ],
   imports: [
     BrowserModule,

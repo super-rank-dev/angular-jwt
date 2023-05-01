@@ -8,9 +8,8 @@
       <div class="col-md-6">
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let course of courseItems | async">
-            {{course.name}}: <b>{{course.department}}</b>
+            {{course.name}}: <b>{{course.department | atmark}}</b>
           </li>
-
         </ul>
       </div>
 
