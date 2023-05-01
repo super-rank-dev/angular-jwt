@@ -12,6 +12,8 @@ import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { AuthStoreService } from './auth-store.service';
+import { StoreModule } from '@ngrx/store';
+import { CourseReducer } from 'src/ngrx/reducers/course.reducer';
 
 const routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +35,10 @@ const routes = [
     FormsModule, ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    StoreModule.forRoot({
+      course: CourseReducer
+    })
   ],
   exports: [
     MatSnackBarModule
